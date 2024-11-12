@@ -1,0 +1,29 @@
+<div class="container">
+   
+    <header class="header">
+      <img src="tallerAngular\src\app\imagenes\tvseries.png" alt="Logo" class="header-img">
+      <h2>TV Series</h2>
+    </header>
+    
+    
+    <table class="table table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Channel</th>
+          <th>Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serie of series">
+          <td>{{ serie.id }}</td>
+          <td>{{ serie.name }}</td>
+          <td>{{ serie.channel }}</td>
+          <td>{{ serie.seasons }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Seasons average :</strong> {{ averageSeasons | number:'1.1-2' }}</p>
+  </div>
+  
